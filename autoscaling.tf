@@ -42,7 +42,7 @@ resource "aws_appautoscaling_policy" "taskoverflow-cpu" {
  target_tracking_scaling_policy_configuration {
    # 使用预定义的指标规范 - ECS服务平均CPU使用率
    predefined_metric_specification {
-     predefined_metric_type = "ECSServiceAverageCPUUtilization"
+     predefined_metric_type = "ECSServiceAverageCPUUtilization"   #标准写法
    }
    target_value = 20  # 目标值为20%，即当CPU使用率超过20%时扩展，低于20%时收缩
  }
